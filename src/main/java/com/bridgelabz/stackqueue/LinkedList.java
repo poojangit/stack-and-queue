@@ -13,6 +13,25 @@ public class LinkedList<E> {
         newNode.next = temp;
         return true;
     }
+    //method to delete the node from the top
+    public E remove(){
+        Node<E> temp = head;
+        //condition to check if the head is null
+        if(head == null){
+            throw new RuntimeException("Stack is empty");
+        }
+        head = head.next;
+        return temp.data;
+    }
+
+    //method to view the node from the top
+    public E view(){
+        //condition to check if the head is empty
+        if(head == null){
+            throw new RuntimeException("Stack is empty");
+        }
+        return head.data;
+    }
     //Overriding the toString method to print the stack
     @Override
     public String toString() {

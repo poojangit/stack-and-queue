@@ -8,6 +8,8 @@ public class MainClass {
         stack.push(70);
         stack.push(30);
         stack.push(56);
+        stack.pop();
+        System.out.println(stack.peek());
         System.out.print(stack.list);
 
     }
