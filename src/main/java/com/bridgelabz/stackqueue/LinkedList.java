@@ -5,6 +5,7 @@ public class LinkedList<E> {
     //creating a head Node
     Node<E> head;
 
+    //Stack - FILO
     //method to add the data to the top
     public boolean add(E data){
         Node<E> newNode = new Node<E>(data);
@@ -32,7 +33,8 @@ public class LinkedList<E> {
         }
         return head.data;
     }
-    //
+    //Queue-FIFO
+    //method to add the node from the first
     public boolean apppend(E data){
         Node newNode = new Node(data);
         if(head==null){
@@ -46,6 +48,16 @@ public class LinkedList<E> {
             temp.next = newNode;
         }
         return true;
+    }
+    //method to remove the element from the beginning
+    public E delete(){
+        if(head==null){
+            throw new RuntimeException("Queue is empty");
+        }
+        E data = head.data;
+        head = head.next;
+        return data;
+
     }
     //Overriding the toString method to print the stack
     @Override
