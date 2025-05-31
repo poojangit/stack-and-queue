@@ -12,6 +12,11 @@ public class MainClass {
         System.out.println(stack.peek());
         System.out.print(stack.list);
 
+        Queue queue = new Queue();
+        queue.enqueue(57);
+        queue.enqueue(30);
+        queue.enqueue(70);
+        System.out.println(queue);
     }
 
 

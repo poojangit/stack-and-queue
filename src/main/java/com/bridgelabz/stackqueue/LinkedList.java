@@ -32,6 +32,21 @@ public class LinkedList<E> {
         }
         return head.data;
     }
+    //
+    public boolean apppend(E data){
+        Node newNode = new Node(data);
+        if(head==null){
+            head = newNode;
+        }
+        else {
+            Node temp = head;
+            while(temp.next!=null){
+                temp = temp.next;
+            }
+            temp.next = newNode;
+        }
+        return true;
+    }
     //Overriding the toString method to print the stack
     @Override
     public String toString() {
